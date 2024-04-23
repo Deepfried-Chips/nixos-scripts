@@ -41,6 +41,8 @@
     xdg-utils
     firefox
     brave
+    sbctl
+    git
   ];
 
   fonts.packages = with pkgs; [

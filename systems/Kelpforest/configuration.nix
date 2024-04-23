@@ -14,7 +14,7 @@
   ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = lib.mkForce false;
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "kelpforest"; # Define your hostname.
@@ -23,7 +23,7 @@
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   boot.lanzaboote = {
-    enable = true;
+    enable = false;
     pkiBundle = "/etc/secureboot";
   };
 
