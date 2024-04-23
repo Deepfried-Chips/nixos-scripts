@@ -21,7 +21,7 @@
   programs.zsh = {
     enable = true;
     ohMyZsh = {
-        enable = true;
+      enable = true;
     };
   };
 
@@ -84,7 +84,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland = {
-        enable = true;
+      enable = true;
     };
   };
 
@@ -110,7 +110,6 @@
       auto-optimise-store = true;
     };
   };
-
 
   networking.networkmanager.enable = true;
 
