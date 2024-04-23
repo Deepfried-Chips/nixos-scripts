@@ -12,13 +12,13 @@
   commonArgs = {inherit self inputs;};
 in {
   "Kelpforest" = mkSystem {
-    specialArgs = commmonArgs;
+    specialArgs = commonArgs;
     modules = [
       ./Kelpforest/configuration.nix
 
       home-manager
       homeKelpforest
-      lanzaboote.nixOsModules.lanzaboote
+      lanzaboote.nixosModules.lanzaboote
     ];
   };
 }
