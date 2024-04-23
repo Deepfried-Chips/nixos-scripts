@@ -1,5 +1,6 @@
 {pkgs, lib, inputs, ...}: {
     imports = [
+        ../common/visualstudio.nix
     ];
 
     home = {
