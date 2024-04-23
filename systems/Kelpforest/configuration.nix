@@ -43,6 +43,18 @@
     LC_TIME = "ro_RO.UTF-8";
   };
 
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+
+    powerManagement.enable = false; # Unused in this case, just in case I need to enable it tho
+
+    nvidiaSettings = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+  }
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   # users.users.alice = {
   #   isNormalUser = true;
