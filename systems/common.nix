@@ -101,6 +101,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   nix = {
     registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
