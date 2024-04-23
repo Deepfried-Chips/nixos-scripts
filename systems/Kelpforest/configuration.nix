@@ -68,7 +68,7 @@
   users.users.chips = {
     isNormalUser = true;
     description = "Deepfried Chips";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     packages = with pkgs; [
       discord
       signal-desktop
