@@ -19,7 +19,6 @@
       "x86_64-linux"
     ];
   in {
-
     nixosConfigurations = import ./systems {inherit self;};
 
     devShells = forAllSystems (
