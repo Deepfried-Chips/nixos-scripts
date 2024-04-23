@@ -15,6 +15,9 @@
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = lib.mkForce false;
+  boot.initrd.verbose = false;
+  boot.consoleLogLevel = 0;
+  boot.kernelParams = ["quiet" "udev.log_level=3"];
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "Kelpforest"; # Define your hostname.
