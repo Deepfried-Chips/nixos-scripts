@@ -1,14 +1,19 @@
-{pkgs, lib, inputs, ...}: {
-    imports = [
-        ../common/visualstudio.nix
-    ];
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
+  imports = [
+    ../common/visualstudio.nix
+  ];
 
-    home = {
-        username = "chips";
-        homeDirectory = "/home/chips";
-    };
+  home = {
+    username = "chips";
+    homeDirectory = "/home/chips";
+  };
 
-    programs.home-manager.enable = true;
+  programs.home-manager.enable = true;
 
-    home.stateVersion = "24.05";
+  home.stateVersion = "24.05";
 }

@@ -1,5 +1,9 @@
-{pkgs, inputs, ...}: {
-    home.packages = with pkgs; [
-        vscode
-    ];
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  home.packages = with pkgs; [
+    vscode
+  ];
 }
