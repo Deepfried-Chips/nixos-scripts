@@ -36,6 +36,9 @@
     brave
     sbctl
     git
+    pass
+    github-cli
+    git-credential-manager
   ];
 
   fonts.packages = with pkgs; [
