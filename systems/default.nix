@@ -1,7 +1,7 @@
 {self, ...}: let
   inherit (self) inputs;
 
-  inherit (inputs) nixpkgs lanzaboote;
+  inherit (inputs) nixpkgs lanzaboote sops-nix;
   inherit (inputs.home-manager.nixosModules) home-manager;
 
   inherit (nixpkgs) lib;
@@ -19,6 +19,7 @@ in {
       home-manager
       homeKelpforest
       lanzaboote.nixosModules.lanzaboote
+      sops-nix.nixosModules.sops
     ];
   };
 }

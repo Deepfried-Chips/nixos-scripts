@@ -10,6 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../common.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -20,6 +21,11 @@
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/etc/secureboot";
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Bucharest";
@@ -55,15 +61,15 @@
     package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.alice = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  #   packages = with pkgs; [
-  #     firefox
-  #     tree
-  #   ];
-  # };
+  users.users.chips = {
+    isNormalUser = true;
+    description = "Deepfried Chips";
+    extraGroups = ["networkmanager" "wheel"];
+    packages = with pkgs; [
+      discord
+      signal-desktop
+    ];
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

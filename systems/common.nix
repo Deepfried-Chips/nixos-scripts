@@ -39,6 +39,8 @@
     wget
     wl-clipboard
     xdg-utils
+    firefox
+    brave
   ];
 
   fonts.packages = with pkgs; [
@@ -71,7 +73,6 @@
     nssmdns4 = true;
     openFirewall = true;
   };
-  services.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -91,6 +92,7 @@
   services.desktopManager.plasma6.enable = true;
 
   security.polkit.enable = true;
+  security.rtkit.enable = true;
 
   nix.gc = {
     automatic = true;
