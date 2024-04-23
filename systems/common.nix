@@ -18,10 +18,6 @@
     driSupport32Bit = true;
   };
 
-  programs.bash = {
-    enable = true;
-  };
-
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
