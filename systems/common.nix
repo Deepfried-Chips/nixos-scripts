@@ -18,11 +18,8 @@
     driSupport32Bit = true;
   };
 
-  programs.zsh = {
+  programs.bash = {
     enable = true;
-    ohMyZsh = {
-      enable = true;
-    };
   };
 
   programs.gnupg.agent = {
@@ -122,7 +119,7 @@
 
   console.useXkbConfig = true;
 
-  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.bash;
 
   system.stateVersion = "24.05";
 }
