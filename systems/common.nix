@@ -43,6 +43,7 @@
     glxinfo
     clinfo
     vulkan-tools
+    age # security jumbo
   ];
 
   fonts.packages = with pkgs; [
