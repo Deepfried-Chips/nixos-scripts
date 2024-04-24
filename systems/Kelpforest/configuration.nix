@@ -53,6 +53,11 @@
     LC_TIME = "ro_RO.UTF-8";
   };
 
+  sops.defaultSopsFile = ../../secrets/chips.yaml;
+  sops.age.keyFile = "/home/chips/.config/sops/age/keys.txt";
+  sops.secrets."passwords/users/chips" = {};
+  sops.secrets."passwords/users/chips".neededForUsers = true;
+
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
@@ -67,6 +72,7 @@
 
   users.users.chips = {
     isNormalUser = true;
+    hashedPasswordFile = config.sops.secrets."passwords/users/chips".path;
     description = "Deepfried Chips";
     extraGroups = ["networkmanager" "wheel" "docker"];
     packages = with pkgs; [
