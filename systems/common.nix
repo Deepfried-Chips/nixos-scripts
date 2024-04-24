@@ -33,7 +33,7 @@
     wl-clipboard
     xdg-utils
     firefox
-    brave
+    # brave # will add back properly later
     sbctl
     git
     pass
