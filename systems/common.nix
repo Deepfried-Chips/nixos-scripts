@@ -39,6 +39,10 @@
     pass
     github-cli
     git-credential-manager
+    libsForQt5.plasma-browser-integration
+    glxinfo
+    clinfo
+    vulkaninfo
   ];
 
   fonts.packages = with pkgs; [
