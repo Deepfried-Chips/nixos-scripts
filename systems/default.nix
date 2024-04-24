@@ -8,6 +8,7 @@
   mkSystem = lib.nixosSystem;
 
   homeKelpforest = ../homes/Kelpforest;
+  homeMushroomforest = ../homes/Mushroomforest;
 
   commonArgs = {inherit self inputs;};
 in {
@@ -19,6 +20,17 @@ in {
       home-manager
       homeKelpforest
       lanzaboote.nixosModules.lanzaboote
+      sops-nix.nixosModules.sops
+    ];
+  };
+
+  "Mushroomforest" = mkSystem {
+    specialArgs = commonArgs;
+    modules = [
+      ./Mushroomforest/configuration.nix
+
+      home-manager
+      homeMushroomforest
       sops-nix.nixosModules.sops
     ];
   };
