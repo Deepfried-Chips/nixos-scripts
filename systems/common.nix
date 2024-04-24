@@ -44,6 +44,7 @@
     clinfo
     vulkan-tools
     age # security jumbo
+    sops
   ];
 
   fonts.packages = with pkgs; [
