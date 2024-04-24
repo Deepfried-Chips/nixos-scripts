@@ -42,7 +42,7 @@
     libsForQt5.plasma-browser-integration
     glxinfo
     clinfo
-    vulkaninfo
+    vulkan-tools
   ];
 
   fonts.packages = with pkgs; [
