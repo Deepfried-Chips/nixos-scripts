@@ -8,7 +8,7 @@
     extraConfig = {
       credential = {
         credentialStore = "gpg";
-        helper = "${pkgs.git-credential-manager}/bin/git-credential-manager";
+        helper = "/run/current-system/sw/bin/git-credential-manager"; #hopefully this fixes path shit
       };
     };
   };
