@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../common/visualstudio.nix
+    ../../common/git-base.nix
   ];
 
   home = {
