@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    ../../common/visualstudio.nix
+    ../../common/brave.nix
     ../../common/git-base.nix
     ../../common/chips-git.nix
   ];
