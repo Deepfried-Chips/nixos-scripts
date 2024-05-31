@@ -31,6 +31,7 @@ in {
 
       home-manager
       homeMushroomforest
+      lanzaboote.nixosModules.lanzaboote
       sops-nix.nixosModules.sops
     ];
   };
