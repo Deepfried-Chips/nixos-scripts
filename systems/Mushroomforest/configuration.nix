@@ -14,11 +14,16 @@
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = lib.mkForce false;;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.verbose = false;
   boot.consoleLogLevel = 0;
   boot.kernelParams = ["quiet" "udev.log_level=3"];
+
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/etc/secureboot";
+  };
 
   sops.defaultSopsFile = ../../secrets/chips.yaml;
   sops.age.keyFile = "/home/chips/.config/sops/age/keys.txt";
