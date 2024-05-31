@@ -14,7 +14,7 @@
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = lib.mkForce false;;
+  boot.loader.systemd-boot.enable = lib.mkForce false;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.verbose = false;
   boot.consoleLogLevel = 0;
