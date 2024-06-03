@@ -6,6 +6,8 @@
 }: {
   imports = [
     ../../common/visualstudio.nix
+    ../../common/brave.nix
+    ../../common/chips-git.nix
   ];
 
   home = {
