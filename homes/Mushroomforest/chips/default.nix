@@ -8,6 +8,7 @@
     ../../common/brave.nix
     ../../common/git-base.nix
     ../../common/chips-git.nix
+    ../../common/krdc.nix
   ];
 
   home = {
